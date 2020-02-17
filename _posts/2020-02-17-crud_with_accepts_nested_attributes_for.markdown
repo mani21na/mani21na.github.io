@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "CRUD with "accepts_nested_attributes_for"
+title:      "CRUD with "accepts_nested_attributes_fo"
 date:       2020-02-17 17:42:55 -0500
 permalink:  crud_with_accepts_nested_attributes_for
 ---
