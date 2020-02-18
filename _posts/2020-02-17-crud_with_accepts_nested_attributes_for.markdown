@@ -101,10 +101,14 @@ So I did fix it again in ListController and List model.
 ```
 
 But this setup alone was not perfect.
-The reason is that I set the item's validates to the item model. So I set the following setting to solve this problem.
+So I set the following setting to solve this problem.
 
 ```
 validates_associated :items
+```
+
+```
+has_many :items, :dependent => :delete_all
 ```
 
 
