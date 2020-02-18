@@ -8,14 +8,14 @@ permalink:  crud_with_accepts_nested_attributes_for
 
 I decided to use nested attributes to store items in Lists table instead of items columns.  And I had to go through a lot of trial and error. I want to keep a record of it.
 
-As  first step, I added the line `**accepts_nested_attributes_for: items**` to the List model. And we modified the list_params method of ListsController like this
+As  first step, I added the line **`accepts_nested_attributes_for: items`** to the List model. And we modified the list_params method of ListsController like this
 
 ```
   def list_params
     params.require(:list).permit(
 		    :user_id, 
 		    :subject, 
-				**items_attributes: [:item_no, :item, :quantity, :done]**
+				items_attributes: [:item_no, :item, :quantity, :done]
 				)
   end 
 ```
@@ -65,7 +65,7 @@ However, the update method showed unexpected movement. This is the first my stru
     params.require(:list).permit(
 		    :user_id, 
 		    :subject, 
-				items_attributes: [:item_no, :item, :quantity, :done, **:id**]
+				items_attributes: [:item_no, :item, :quantity, :done, :id]
 				)
   end 
 ```
@@ -82,7 +82,7 @@ The next problem was that when deleting a list, the items in the list were left 
 
 I found out that another configuration is required to use this delete feature.
 
-> the accepts_nested_attributes_for has some neat features for deleting associations. If we pass the allow_destroy: true argument to accepts_nested_attributes_for, it will destroy any members from the attributes.
+> the accepts_nested_attributes_for has some neat features for deleting associations. If we pass the **allow_destroy: true** argument to accepts_nested_attributes_for, it will destroy any members from the attributes.
 > 
 
 So I did fix it again in ListController and List model.
@@ -92,12 +92,12 @@ So I did fix it again in ListController and List model.
     params.require(:list).permit(
 		    :user_id, 
 		    :subject, 
-				items_attributes: [:item_no, :item, :quantity, :done, :id, ** '_destroy'**]
+				items_attributes: [:item_no, :item, :quantity, :done, :id, '_destroy']
 				)
   end 
 	
 	
-	accepts_nested_attributes_for :items, **:allow_destroy => true**
+	accepts_nested_attributes_for :items, :allow_destroy => true
 ```
 
 But this setup alone was not perfect.
