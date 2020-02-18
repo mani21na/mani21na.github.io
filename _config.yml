@@ -1,11 +1,11 @@
 # Site settings
 author: Hanna Lee
-title: 
+title: Hanna
 header-img: img/home-bg.png
 email: mani21na@gmail.com
 copyright_name: Hanna Lee
 description: > # this means to ignore newlines until "baseurl:"
-  
+  about learning
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  mani21na
