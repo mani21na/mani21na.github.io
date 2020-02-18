@@ -111,4 +111,3 @@ validates_associated :items
 has_many :items, :dependent => :delete_all
 ```
 
-
