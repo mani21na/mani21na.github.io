@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "JavaScript asynchronous processing on Rails"
-date:       2020-03-25 01:33:45 +0000
+date:       2020-03-24 21:33:46 -0400
 permalink:  javascript_asynchronous_processing_on_rails
 ---
 
