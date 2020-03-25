@@ -32,7 +32,7 @@ For example, if you need to re-request profile picture information using the use
 There are several ways to handle asynchronous, which must be done sequentially.
 
 1. Using callback functions
-2. Promise
+2. Promise ( fetch()/then() )
 3. async / await using Promise
 
 
