@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "Diffrenece between render and component prop on React Router"
-date:       2020-05-05 19:44:18 +0000
+title:      "Diffrenece between render and component on React Router"
+date:       2020-05-05 15:44:19 -0400
 permalink:  diffrenece_between_render_and_component_prop_on_react_router
 ---
 
